@@ -5,21 +5,21 @@
 class Zqta < Formula
   desc "ZQTA project."
   homepage "https://github.com/VinCSS-Public-Projects/ZQTA"
-  version "0.59.10"
+  version "1.0.0"
   license "BSD3"
   depends_on :macos
 
   if Hardware::CPU.intel?
-    url "https://github.com/VinCSS-Public-Projects/ZQTA/releases/download/v0.59.10/zqta_0.59.10_darwin_amd64.tar.gz"
-    sha256 "8d359e32a8823edea41faad8804f77c6958288fcefde6cfbc4001d4918ebc6eb"
+    url "https://github.com/VinCSS-Public-Projects/ZQTA/releases/download/1.0.1/zqta_1.0.0_darwin_amd64.tar.gz"
+    sha256 "f69acf24636ad269db82f9a2ce845bb69fe7041c15daa0e6f4ca521f738f4725"
 
     def install
       bin.install "zqta"
     end
   end
   if Hardware::CPU.arm?
-    url "https://github.com/VinCSS-Public-Projects/ZQTA/releases/download/v0.59.10/zqta_0.59.10_darwin_arm64.tar.gz"
-    sha256 "9b1de1d14909d1c99b799ee52ed7f9ff4dcd19f8d1246653d9f8b47b4395b2cd"
+    url "https://github.com/VinCSS-Public-Projects/ZQTA/releases/download/1.0.1/zqta_1.0.0_darwin_arm64.tar.gz"
+    sha256 "afb4eb850bd24e934d4750f0fa3329bf418f04334f35d965e849496d09134e74"
 
     def install
       bin.install "zqta"
