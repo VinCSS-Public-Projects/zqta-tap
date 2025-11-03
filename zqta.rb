@@ -11,7 +11,7 @@ class Zqta < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/VinCSS-Public-Projects/ZQTA/releases/download/v1.0.0/zqta_1.0.0_darwin_amd64.tar.gz"
-      sha256 "8fb695e8f351c1ea9f37d7dbe6d80fddc08b571cb1a5f556fcca988173bccc2b"
+      sha256 "330fd467d74019ba4fc7f7245f8ca1819f3f885a19d02d9b0425cdb4583a73e0"
 
       def install
         bin.install "zqta"
@@ -19,7 +19,7 @@ class Zqta < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/VinCSS-Public-Projects/ZQTA/releases/download/v1.0.0/zqta_1.0.0_darwin_arm64.tar.gz"
-      sha256 "56680b178111759100636880b6070a18798f41db9f50f2037f04c8f597bbbf44"
+      sha256 "6bb90078f0f4203da66da459549ca5d9ae898a3101579495f244b4252833b1fb"
 
       def install
         bin.install "zqta"
@@ -30,21 +30,21 @@ class Zqta < Formula
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
       url "https://github.com/VinCSS-Public-Projects/ZQTA/releases/download/v1.0.0/zqta_1.0.0_linux_amd64.tar.gz"
-      sha256 "f458299c6f33ca3c7c8ee09e25fa6d2ae682e6026e63607ec285100cdf48d68b"
+      sha256 "b9edfe09e4fffc01f1cc3a6b8711acf900fe6366ea29a46362eff72fd6c74d06"
       def install
         bin.install "zqta"
       end
     end
     if Hardware::CPU.arm? and !Hardware::CPU.is_64_bit?
       url "https://github.com/VinCSS-Public-Projects/ZQTA/releases/download/v1.0.0/zqta_1.0.0_linux_armv6.tar.gz"
-      sha256 "e6ec50ac86c172bf040d3691c6d04eddf7b9bd7b14d1e9cfd85211bf4ed8fc30"
+      sha256 "33f2aa40d6609702475417cf24365ad48f481f12c9fcb516c849d3a778783809"
       def install
         bin.install "zqta"
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
       url "https://github.com/VinCSS-Public-Projects/ZQTA/releases/download/v1.0.0/zqta_1.0.0_linux_arm64.tar.gz"
-      sha256 "ed6f12d57d81de78f60ca9fa934cd34b848c92f7d3345d35f2d634f1028d45e2"
+      sha256 "bdc598f3c7db5d6aba4297f1b16afd4b6783a8ead5f6dee1acd2c954ba10ff72"
       def install
         bin.install "zqta"
       end
