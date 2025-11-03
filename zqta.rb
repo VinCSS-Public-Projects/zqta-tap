@@ -7,47 +7,22 @@ class Zqta < Formula
   homepage "https://github.com/VinCSS-Public-Projects/ZQTA"
   version "1.0.0"
   license "BSD3"
+  depends_on :macos
 
-  on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/VinCSS-Public-Projects/ZQTA/releases/download/v1.0.0/zqta_1.0.0_darwin_amd64.tar.gz"
-      sha256 "330fd467d74019ba4fc7f7245f8ca1819f3f885a19d02d9b0425cdb4583a73e0"
+  if Hardware::CPU.intel?
+    url "https://github.com/VinCSS-Public-Projects/ZQTA/releases/download/v1.0.0/zqta_1.0.0_darwin_amd64.tar.gz"
+    sha256 "330fd467d74019ba4fc7f7245f8ca1819f3f885a19d02d9b0425cdb4583a73e0"
 
-      def install
-        bin.install "zqta"
-      end
-    end
-    if Hardware::CPU.arm?
-      url "https://github.com/VinCSS-Public-Projects/ZQTA/releases/download/v1.0.0/zqta_1.0.0_darwin_arm64.tar.gz"
-      sha256 "6bb90078f0f4203da66da459549ca5d9ae898a3101579495f244b4252833b1fb"
-
-      def install
-        bin.install "zqta"
-      end
+    def install
+      bin.install "zqta"
     end
   end
+  if Hardware::CPU.arm?
+    url "https://github.com/VinCSS-Public-Projects/ZQTA/releases/download/v1.0.0/zqta_1.0.0_darwin_arm64.tar.gz"
+    sha256 "6bb90078f0f4203da66da459549ca5d9ae898a3101579495f244b4252833b1fb"
 
-  on_linux do
-    if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/VinCSS-Public-Projects/ZQTA/releases/download/v1.0.0/zqta_1.0.0_linux_amd64.tar.gz"
-      sha256 "b9edfe09e4fffc01f1cc3a6b8711acf900fe6366ea29a46362eff72fd6c74d06"
-      def install
-        bin.install "zqta"
-      end
-    end
-    if Hardware::CPU.arm? and !Hardware::CPU.is_64_bit?
-      url "https://github.com/VinCSS-Public-Projects/ZQTA/releases/download/v1.0.0/zqta_1.0.0_linux_armv6.tar.gz"
-      sha256 "33f2aa40d6609702475417cf24365ad48f481f12c9fcb516c849d3a778783809"
-      def install
-        bin.install "zqta"
-      end
-    end
-    if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/VinCSS-Public-Projects/ZQTA/releases/download/v1.0.0/zqta_1.0.0_linux_arm64.tar.gz"
-      sha256 "bdc598f3c7db5d6aba4297f1b16afd4b6783a8ead5f6dee1acd2c954ba10ff72"
-      def install
-        bin.install "zqta"
-      end
+    def install
+      bin.install "zqta"
     end
   end
 end
